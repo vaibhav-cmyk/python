@@ -324,5 +324,11 @@ import array as arr
 
 
 
+import qrcode
 
+data = 'Vaibhav Atiwadkar'
 
+qr = qrcode.make(data)
+
+qr.save("qrcode.png")
+print("QR code generated successfully!!")
