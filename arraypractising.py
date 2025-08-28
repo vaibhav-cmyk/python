@@ -72,3 +72,45 @@
 
 # rotated_array = arr.array('i',rotated)
 # print(rotated_array)
+
+
+# x = "4" + "2"
+# val = int(x) + 6
+# print(val)
+# print(float(val))
+
+
+
+
+import pandas as pd
+
+# Create a dictionary with categories and example formulas
+data = {
+    "Category": [
+        "Lookup", "Lookup", "Conditional", "Aggregate", "Text", "Date", "Dynamic Arrays"
+    ],
+    "Formula Template": [
+        '=XLOOKUP(B2, Customers[ID], Customers[Name])',
+        '=INDEX(A2:A10, MATCH(105, B2:B10, 0))',
+        '=IF(D2>1000, "High", "Low")',
+        '=SUMIFS(Sales[Amount], Sales[Region], G2)',
+        '=TEXTJOIN(", ", TRUE, A2:C2)',
+        '=NETWORKDAYS(A2, B2, Holidays!A:A)',
+        '=UNIQUE(FILTER(Orders[Product], Orders[Region]="East"))'
+    ],
+    "Usage Description": [
+        "Fetch customer name based on ID",
+        "Flexible lookup using index and match",
+        "Categorize revenue",
+        "Sum sales filtered by region",
+        "Combine multiple fields with comma",
+        "Calculate business days between dates",
+        "List unique products for East region"
+    ]
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Save to Excel
+df.to_excel("Excel_Formulas_for_Data_Analytics.xlsx", index=False)

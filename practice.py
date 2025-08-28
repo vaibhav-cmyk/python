@@ -315,20 +315,13 @@ import array as arr
 # print(sort_list)
 
 
+# import qrcode
+
+# data = 'Vaibhav Atiwadkar'
+
+# qr = qrcode.make(data)
+
+# qr.save("qrcode.png")
+# print("QR code generated successfully!!")
 
 
-
-
-
-
-
-
-
-import qrcode
-
-data = 'Vaibhav Atiwadkar'
-
-qr = qrcode.make(data)
-
-qr.save("qrcode.png")
-print("QR code generated successfully!!")
